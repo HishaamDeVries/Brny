@@ -1,0 +1,33 @@
+{
+    "slides": [
+        {
+            "id": 1,
+            "caption": "Man On Train tracks That bends and fades away",
+            "image": "img/IMG1.jpg"
+        },
+
+        {
+            "id": 2,
+            "caption": "Man on rocks in the Ocean",
+            "image": "img/IMG2.jpeg"
+        },
+
+        {
+            "id": 3,
+            "caption": "The Wreckage of The Death Star",
+            "image": "img/IMG3.jpg"
+        },
+
+        {
+            "id": 4,
+            "caption": "Stary Night Sky",
+            "image": "img/IMG4.jpg"
+        },
+
+        {
+            "id": 5,
+            "caption": "Long straight road with trees that have Autum leaves",
+            "image": "img/IMG5.jpeg"
+        }
+    ]
+}
