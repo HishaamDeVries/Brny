@@ -1,13 +1,17 @@
 const jsonServer = require('json-server');
+const app = jsonServer.create();
+const path = require('path');
 const express = require('express');
-const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 5000;
-const app = express();
-const path = require("path");
+const router = jsonServer.router('db.json');
+const port = process.env.PORT || 3001;
 
-app.use(middlewares);
-app.use(router);
+app.use('/db', middlewares, router);
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {
