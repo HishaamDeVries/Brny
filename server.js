@@ -6,12 +6,7 @@ const middlewares = jsonServer.defaults();
 const router = jsonServer.router('db.json');
 const port = process.env.PORT || 5000;
 
-app.use('/db', middlewares, router);
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+app.use(middlewares, router);
 
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {
